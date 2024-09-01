@@ -1,0 +1,12 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: {{ .Values.argocdSelfManage.project }}
+spec:
+  description: Project for learning purpose
+  destinations:
+    - namespace: {{ .Values.namespace }}
+    server: https://kubernetes.default.svc
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'

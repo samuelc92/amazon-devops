@@ -4,3 +4,8 @@ argo-cd:
 
   controller:
     replicaCount: 1
+  
+  applicationSet:
+    replicaCount: 2
+  
+  
